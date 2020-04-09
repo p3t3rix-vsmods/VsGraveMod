@@ -1,0 +1,32 @@
+{
+  "code": "grave",
+  "entityclass": "GraveBlockEntity",
+  "class": "GraveBlock",
+  "behaviors": [ { "name": "HorizontalOrientable" } ],
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "lightAbsorption": 0,
+  "creativeinventory": { "general": [ "*" ] },
+  "drawtype": "json",
+  "shape": {
+    "base": "block/grave",
+    "rotateYByType": {
+      "*-north": 0,
+      "*-east": 270,
+      "*-south": 180,
+      "*-west": 90
+    }
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  },
+  "blockmaterial": "Stone",
+  "resistance": 1.0
+}

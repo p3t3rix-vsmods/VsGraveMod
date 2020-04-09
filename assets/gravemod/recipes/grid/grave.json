@@ -1,0 +1,16 @@
+{
+  "ingredientPattern": "SSS\t_S_\t_S_",
+  "ingredients": {
+    "S": {
+      "type": "item",
+      "code": "game:stick"
+    }
+  },
+  "name": "grave",
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "grave-north"
+  }
+}
