@@ -10,7 +10,7 @@
     }
   ],
   "lightAbsorption": 0,
-  "creativeinventory": { "general": [ "*" ] },
+  "creativeinventory": { "general": [ "*-north" ] },
   "drawtype": "json",
   "shape": {
     "base": "block/grave",
