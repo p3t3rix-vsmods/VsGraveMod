@@ -34,6 +34,10 @@
     <AssetFiles Include="$(OutDir)/assets/**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Foundation\Foundation.csproj" />
+  </ItemGroup>
+
   <Target Name="CopyToBin" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Debug'">
     <Copy SourceFiles="@(AssetFiles)" DestinationFiles="@(AssetFiles->'$(BinaryDir)/assets/%(RecursiveDir)%(Filename)%(Extension)')" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BinaryDir)" />

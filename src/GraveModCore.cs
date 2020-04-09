@@ -1,4 +1,5 @@
-﻿using GraveMod.BlockEntities;
+﻿using Foundation.Util.Extensions;
+using GraveMod.BlockEntities;
 using GraveMod.Blocks;
 using GraveMod.Util;
 using Vintagestory.API.Common;
@@ -14,7 +15,7 @@ namespace GraveMod
 
         public override void StartPre(ICoreAPI api)
         {
-            GraveModConfig.Load(api);
+            GraveModConfig.Current = api.LoadOrCreateConfig<GraveModConfig>("GraveModConfig.json");
         }
 
         public override void Start(ICoreAPI api)

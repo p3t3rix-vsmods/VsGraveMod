@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Linq;
+using Foundation.Util.Extensions;
 using GraveMod.Util;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
@@ -8,7 +9,7 @@ using Vintagestory.GameContent;
 
 namespace GraveMod.Systems
 {
-    class DeathWaypointCreator : ModSystem
+    public class DeathWaypointCreator : ModSystem
     {
         private WorldMapManager _mapManager;
         private const string WaypointIcon = "circle";

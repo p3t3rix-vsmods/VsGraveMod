@@ -13,7 +13,7 @@ namespace GraveMod.Systems
         public override bool ShouldLoad(EnumAppSide forSide) => true;
         
         private ICoreServerAPI _serverApi;
-        private readonly List<string> _inventoryPrefixes = GraveModConfig.Current.InventoryPrefixes;
+        private List<string> _inventoryPrefixes => GraveModConfig.Current.InventoryPrefixes;
 
         public override void StartServerSide(ICoreServerAPI api)
         {
@@ -39,7 +39,6 @@ namespace GraveMod.Systems
             _serverApi.World.BlockAccessor.BreakBlock(placeForGrave, player);
             var grave = _serverApi.World.GetBlock(new AssetLocation(Constants.DomainName,"grave-north"));
             _serverApi.World.BlockAccessor.SetBlock(grave.BlockId, placeForGrave);
-            _serverApi.World.BlockAccessor.SpawnBlockEntity(nameof(GraveBlockEntity),placeForGrave);
 
             if (_serverApi.World.BlockAccessor.GetBlockEntity(placeForGrave) is GraveBlockEntity graveEntity)
             {
