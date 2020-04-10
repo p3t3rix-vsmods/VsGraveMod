@@ -9,6 +9,16 @@
       "loadFromProperties": "abstract/horizontalorientation"
     }
   ],
+  "attributes": {
+    "handbook": {
+      "extraSections": [
+        {
+          "title": "gravemod:handbook-grave-title",
+          "text": "gravemod:handbook-grave-text"
+        }
+      ]
+    }
+  },
   "lightAbsorption": 0,
   "creativeinventory": { "general": [ "*-north" ] },
   "drawtype": "json",
