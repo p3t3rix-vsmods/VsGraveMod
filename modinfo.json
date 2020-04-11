@@ -2,7 +2,7 @@
   "type": "code",
   "modid": "gravemod",
   "name": "GraveMod",
-  "author": "Unknown",
+  "author": "P3t3rix",
   "description": "Adds a grave when you die and creates a waypoint for it",
   "version": "1.0.0",
   "dependency": {
