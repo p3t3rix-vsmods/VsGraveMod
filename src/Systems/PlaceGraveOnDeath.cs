@@ -42,10 +42,13 @@ namespace GraveMod.Systems
 
             if (_serverApi.World.BlockAccessor.GetBlockEntity(placeForGrave) is GraveBlockEntity graveEntity)
             {
-                var items = player.InventoryManager.Inventories
-                    .Where(i => _inventoryPrefixes.Any(i.Key.StartsWith))
+                var inventories = player.InventoryManager.Inventories
+                    .Where(i => _inventoryPrefixes.Any(i.Key.StartsWith));
+
+                var items = inventories
                     .SelectMany(i => i.Value.ToList())
                     .Where(i => !i.Empty)
+                    .OrderBy(i => i.StorageType == EnumItemStorageFlags.Backpack) // so backpacks get taken out last (otherwise you access items that are not there anymore)
                     .ToList();
                 foreach (var itemSlot in items)
                 {
