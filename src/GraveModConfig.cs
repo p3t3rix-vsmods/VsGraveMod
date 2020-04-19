@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using Foundation.Util;
-using Vintagestory.API.Common;
+﻿using System.Collections.Generic;
 
-namespace GraveMod.Util
+namespace GraveMod
 {
     public class GraveModConfig 
     {
         public static GraveModConfig Current { get; set; }
 
-        public bool ShouldCreateDeathWaypoint { get; set; } = true;
-        public List<string> InventoryPrefixes { get; set; } = new List<string>()
+        public bool ShouldCreateDeathWaypoint { get; set; } = true; // if a waypoint should be created
+        public List<string> InventoryPrefixes { get; set; } = new List<string>() // inventories that should be transferred to the grave
         {
             "hotbar",
             "backpack"
         };
+
+        public int GraveRadius { get; set; } = 1; // radius to search for valid blocks
     }
 }

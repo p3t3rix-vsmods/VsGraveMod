@@ -2,8 +2,8 @@
 using System.Drawing;
 using System.Linq;
 using Foundation.Util.Extensions;
-using GraveMod.Util;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
@@ -32,7 +32,7 @@ namespace GraveMod.Systems
 
         private static Waypoint CreateDeathWaypoint(IServerPlayer player)
         {
-            var timeString = DateTime.Now.ToString("yyyMMddHHmmss");
+            var timeString = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             return new Waypoint()
             {
                 Color = Color.Black.ToArgb(),
@@ -40,7 +40,7 @@ namespace GraveMod.Systems
                 Position = player.Entity.Pos.XYZ,
                 OwningPlayerGroupId = player.Groups.FirstOrDefault()?.GroupUid ?? 0,
                 OwningPlayerUid = player.Entity.PlayerUID,
-                Title = $"Death -- ({timeString})"
+                Title = $"{Lang.Get($"{Constants.DomainName}:waypoint_death")} -- ({timeString})"
             };
         }
     }

@@ -1,5 +1,6 @@
 {
   "block-grave-*": "Grave",
+  "waypoint_death": "Death",
   "handbook-grave-title": "Description",
-  "handbook-grave-text" :  "Created when a player dies, contains all the items at the point of death.\n Can be crafted for decorative purposes." 
+  "handbook-grave-text": "Created when a player dies, contains all the items at the point of death.\n Can be crafted for decorative purposes."
 }
