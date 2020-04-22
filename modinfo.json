@@ -5,10 +5,10 @@
   "author": "P3t3rix",
   "description": "Adds a grave when you die and creates a waypoint for it",
   "version": "2.0.0",
-  "dependency": {
+  "dependencies": {
     "game": "",
     "survival": "",
-    "foundation" : "1.1" 
+    "foundation": "1.1"
 
   }
 }
