@@ -13,7 +13,7 @@ namespace GraveMod.Systems
     {
         private ICoreServerAPI _serverApi;
         private Block _graveBlock;
-        private List<string> _inventoryPrefixes => GraveModConfig.Current.InventoryPrefixes;
+        private List<string> InventoryPrefixes => GraveModConfig.Current.InventoryPrefixes;
 
         public override double ExecuteOrder() => 2.0; //can load after everything else
 
@@ -51,7 +51,7 @@ namespace GraveMod.Systems
         private void PlaceItemsInGrave(IServerPlayer player, GraveBlockEntity graveEntity)
         {
             var inventories = player.InventoryManager.Inventories
-                .Where(i => _inventoryPrefixes.Any(i.Key.StartsWith));
+                .Where(i => InventoryPrefixes.Any(i.Key.StartsWith));
 
             var items = inventories
                 .SelectMany(i => i.Value.ToList())
