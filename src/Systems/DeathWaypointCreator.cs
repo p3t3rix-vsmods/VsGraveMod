@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Linq;
-using Foundation.Util.Extensions;
+using Foundation.Extensions;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;

@@ -1,4 +1,4 @@
-﻿using Foundation.Util.Extensions;
+﻿using Foundation.Extensions;
 using GraveMod.BlockEntities;
 using GraveMod.Blocks;
 using Vintagestory.API.Common;
