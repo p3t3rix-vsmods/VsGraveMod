@@ -4,11 +4,9 @@
   "name": "GraveMod",
   "author": "P3t3rix",
   "description": "Adds a grave when you die and creates a waypoint for it",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "dependencies": {
     "game": "",
-    "survival": "",
-    "foundation": "1.1"
-
+    "survival": ""
   }
 }

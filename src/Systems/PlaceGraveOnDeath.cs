@@ -71,7 +71,7 @@ namespace GraveMod.Systems
             if (gravePos != null)
             {
                 //first check the current position
-                if (_serverApi.World.BlockAccessor.GetBlock(gravePos).IsReplacableBy(_graveBlock))
+                if (_serverApi.World.BlockAccessor.GetBlock(gravePos)?.IsReplacableBy(_graveBlock) == true)
                 {
                     return gravePos;
                 }
@@ -81,7 +81,7 @@ namespace GraveMod.Systems
                     gravePos.AddCopy(radius, radius, radius),
                     (block, blockPos) =>
                     {
-                        if (block.IsReplacableBy(_graveBlock))
+                        if (block != null && block.IsReplacableBy(_graveBlock))
                         {
                             gravePos = blockPos;
                             return false;
