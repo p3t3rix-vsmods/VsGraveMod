@@ -1,4 +1,5 @@
-﻿using Foundation.Extensions;
+﻿using System;
+using Foundation.Extensions;
 using GraveMod.BlockEntities;
 using GraveMod.Blocks;
 using Vintagestory.API.Common;
@@ -19,8 +20,17 @@ namespace GraveMod
 
         public override void Start(ICoreAPI api)
         {
-            api.RegisterBlockClass(nameof(GraveBlock), typeof(GraveBlock));
-            api.RegisterBlockEntityClass(nameof(GraveBlockEntity), typeof(GraveBlockEntity));
+            api.World.Logger.Debug("start registering blocks");
+            try
+            {
+                api.RegisterBlockClass(nameof(GraveBlock), typeof(GraveBlock));
+                api.RegisterBlockEntityClass(nameof(GraveBlockEntity), typeof(GraveBlockEntity));
+            }
+            catch (Exception e)
+            {
+                api.World.Logger.LogRaw(EnumLogType.Debug,$"error registering blocks: {e.StackTrace}");
+                throw;
+            }
         }
     }
 }
