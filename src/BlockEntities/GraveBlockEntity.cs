@@ -31,9 +31,9 @@ namespace GraveMod.BlockEntities
             }
         }
 
-        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
+        public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
-            base.FromTreeAtributes(tree, worldAccessForResolve);
+            base.FromTreeAttributes(tree, worldAccessForResolve);
             var items = tree.GetOrAddTreeAttribute("items");
             foreach (var saveItems in items)
             {
